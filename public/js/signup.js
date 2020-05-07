@@ -22,7 +22,7 @@ $(document).ready(function() {
     passwordInput.val('');
   });
 
-  // Does a post to the signup route. If successful, we are redirected 
+  // Does a post to the signup route. If successful, we are redirected
   // to the members page.  Otherwise we log any errors
   /**
  * This signs up a new User.
