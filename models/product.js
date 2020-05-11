@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  const Product = sequelize.define('Product', {
+  return sequelize.define('product', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -11,6 +11,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     },
     price: {
+      // eslint-disable-next-line new-cap
       type: DataTypes.DECIMAL(5, 2),
       allowNull: false,
     },
@@ -18,13 +19,15 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+  },
+  {
+    freezeTableName: true,
   });
-  Product.associate = function(models) {
-    Product.belongsTo(models.ProductCategory, {
+  product.associate = function(models) {
+    product.belongsTo(models.product_category, {
       foreignKey: {
         allowNull: false,
       },
     });
   };
-  return Product;
 };
