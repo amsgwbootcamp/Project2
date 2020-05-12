@@ -1,6 +1,6 @@
 
 module.exports = function(sequelize, DataTypes) {
-  const ProductCategory = sequelize.define('ProductCategory', {
+  return sequelize.define('product_category', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -11,6 +11,8 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
+  },
+  {
+    freezeTableName: true,
   });
-  return ProductCategory;
 };
