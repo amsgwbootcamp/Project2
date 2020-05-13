@@ -4,12 +4,8 @@ $(document).ready(function() {
       closable: false,
       allowMultiple: true,
     }).modal('show');
-<<<<<<< HEAD
   });
-  // Adding a comment so file will be marked as changed.  
-=======
-  })
->>>>>>> 81b4969f8dd4e4c2402e244538c8eacee6260b70
+  // Adding a comment so file will be marked as changed.
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   $.get('/api/user_data').then(function(data) {
