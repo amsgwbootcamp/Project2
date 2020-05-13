@@ -7,6 +7,8 @@ INSERT INTO product_category (category) VALUES ("Frozen");
 INSERT INTO product_category (category) VALUES ("Condiments/Sauces");
 INSERT INTO product_category (category) VALUES ("Various groceries");
 INSERT INTO product_category (category) VALUES ("Canned foods");
+INSERT INTO product_category (category) VALUES ("Seafood");
+INSERT INTO product_category (category) VALUES ("Spices & Herbs");
 INSERT INTO product_category (category) VALUES ("Dairy");
 INSERT INTO product_category (category) VALUES ("Cheese");
 INSERT INTO product_category (category) VALUES ("Meat");
@@ -21,6 +23,7 @@ INSERT INTO product_category (category) VALUES ("Personal care");
 INSERT INTO product_category (category) VALUES ("Medicine");
 INSERT INTO product_category (category) VALUES ("Kitchen");
 INSERT INTO product_category (category) VALUES ("Cleaning products");
+INSERT INTO product_category (category) VALUES ("Refrigerated items");
 INSERT INTO product_category (category) VALUES ("Office supplies");
 INSERT INTO product_category (category) VALUES ("Miscellanous");
-INSERT INTO product_category (category) VALUES ("Carcinogens");
+
