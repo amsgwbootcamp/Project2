@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">    
+  <link rel="stylesheet" src="stylesheets/style.css">
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   
 
@@ -31,16 +32,17 @@
     </div>
   </div>
 
-  <button class="modalButton">MODAL</button>
+  <button class="modalButton">Food Product</button>
     <div class="ui modal foodModal">
 		  <i class="close icon"></i>
-      <div class="header">Nutritional Facts</div>
-        <div class="content">
-          Test Text!          
-        </div>
+      <div class="header">
         <div class = "actions">
-          <button class="ui green neutral button toCart">Add to Cart</button>
-          <button class="ui orange cancel button">Cancel</button>
+          <button class="ui green neutral button toCart" style="float: left;">Add to Cart</button>
+          <span class="mTitle">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Nutritional Information</span>
+          <button class="ui orange cancel button" style="float: right;">Cancel</button>
+          </div>
+      </div>
+      <div class="content"></div>         
         </div>
       </div>
     </div>
