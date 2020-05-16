@@ -1,8 +1,26 @@
 /* eslint-disable require-jsdoc */
+const counter = 1;
+
 $(document).ready(function() {
   $('.modalButton').click(function() {
     const fdDiv = $('.content');
     getNutrition(fdDiv);
+  });
+
+  $('.toCart').on('click', function(event) {
+    const food = $('.modalButton').text();
+    const qty = 4;
+    const item = 'Apples';
+    const price = 2.99;
+    localStorage.setItem(counter.toString(),
+        food+','+qty.toString()+','+item+','+price.toString());
+    // alert('Item added to cart');
+    $('.foodModal').modal({closable: false,
+      allowMultiple: true,
+    }).modal('hide');
+    // const a = localStorage.getItem(counter.toString());
+    // const b = a.split(',');
+    // alert('Item added to cart');
   });
 
   // This file just does a GET request to figure out which user is logged in
@@ -12,7 +30,7 @@ $(document).ready(function() {
   });
 });
 
-function getNutrition(fdDiv) {
+function getNutrition(fdDiv, food) {
   const settings = {
     'async': true,
     'crossDomain': true,
