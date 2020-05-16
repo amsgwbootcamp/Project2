@@ -12,3 +12,12 @@ body {
   background-size: cover;
 }
 
+.mTitle {
+  text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
