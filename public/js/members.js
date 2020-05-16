@@ -59,9 +59,12 @@ function getNutrition(fdDiv, food) {
     }).modal('show');
   });
 
-  $('#cartBttn').on('click', function(event) {
-    preventDefault(event);
-
+  $('#cartBttn').on('click', function() {
+    // preventDefault(event);
+    $.get('../public/cart.html');
+  });
+};
+/*
     let subTotal = 0;
     cartArray = localStorage.getItem(food);
     for (let i = 0; i < cartArray.length; i++) {
@@ -75,4 +78,4 @@ function getNutrition(fdDiv, food) {
     // flat shipping rate of $10
     grandTotal = subTotal + tax + 10;
   });
-};
+};*/
