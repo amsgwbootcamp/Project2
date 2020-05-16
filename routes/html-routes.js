@@ -27,4 +27,20 @@ module.exports = function(app) {
   app.get('/members', isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, '../public/members.html'));
   });
+
+
+  app.get('/cart', function(req, res) {
+    if (localStorage.getItem('1')) {
+      let i=1;
+      const cartArr = [];
+      while (localStorage.getItem(i)) {
+        cartArr.push(localStorage.getItem(i));
+        i++;
+      }
+      res.render('cart', cartArr);
+    } else {
+      res.redirect('/category');
+    }
+  });
 };
+

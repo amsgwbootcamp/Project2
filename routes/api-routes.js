@@ -51,4 +51,9 @@ module.exports = function(app) {
       });
     }
   });
+  app.get('/api/public/js/members.js', function(req, res) {
+    // The user is not logged in, send back an empty object
+    res.json({});
+  });
 };
+
