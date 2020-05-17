@@ -1,0 +1,13 @@
+<h1> Categories <h1>
+    
+      {{#each all}}
+          <div>
+            <a href="/product/{{this.id}}">
+              <button class= "category">{{this.category}}</button>
+            </a>
+          </div>
+      {{/each}}
+
+      <script src = "js/category.js"></script>
+    
+
