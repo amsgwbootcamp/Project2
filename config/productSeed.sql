@@ -1,4 +1,4 @@
-use  passport_demo;
+use  shop_db;
 ALTER TABLE product MODIFY COLUMN createdAt TIMESTAMP NOT NULL DEFAULT current_timestamp;
 ALTER TABLE product MODIFY COLUMN updatedAt TIMESTAMP NOT NULL DEFAULT current_timestamp;
 

@@ -1,5 +1,7 @@
 // Requiring path to so we can use relative routes to our HTML files
 const path = require('path');
+const db = require('../models');
+
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require('../config/middleware/isAuthenticated');
@@ -27,4 +29,49 @@ module.exports = function(app) {
   app.get('/members', isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, '../public/members.html'));
   });
+
+  app.get('/category', function(req, res) {
+    db.product_category.findAll().then((allCat) => {
+      const all = allCat.map((cat) => {
+        return {
+          id: cat.id,
+          category: cat.category,
+        };
+      });
+      // console.log(allCat[0].get({plain: true}));
+      // console.log('beginning of response:' + res);
+      // console.log('endof');
+      // const allCat = res;
+
+      res.render('category', {all});
+    })
+        .catch((err)=>console.log(err));
+  });
+  app.get('/product/:id', function(req, res, next) {
+    db.product.findAll({
+      where: {
+        category_id: req.params.id,
+      },
+    }).then((allProd) => {
+      const all = allProd.map((prod) => {
+        return {
+          item: prod.item,
+          price: prod.price,
+          category_id: prod.category_id,
+        };
+      });
+      // console.log(allCat[0].get({plain: true}));
+      // console.log('beginning of response:' + res);
+      // console.log('endof');
+      // const allCat = res;
+
+      res.render('product', {all});
+    })
+        .catch((err)=>console.log(err));
+  });
+  // This will allow the style sheet to be loaded into the browser:
+  app.get('/style.css', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/stylesheets/style.css'));
+  });
 };
+

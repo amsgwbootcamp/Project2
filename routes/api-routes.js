@@ -37,6 +37,19 @@ module.exports = function(app) {
     res.redirect('/');
   });
 
+  app.get('/category', function(req, res) {
+    alert(__dirname);
+    res.sendFile(path.join(
+        __dirname, '/views/category.handlebars'));
+  });
+
+  app.get('/product', function(req, res) {
+    alert(__dirname);
+    res.sendFile(path.join(
+        __dirname, '/views/product.handlebars'));
+  });
+
+
   // Route for getting some data about our user to be used client side
   app.get('/api/user_data', function(req, res) {
     if (!req.user) {
@@ -49,6 +62,12 @@ module.exports = function(app) {
         email: req.user.email,
         id: req.user.id,
       });
+
+      // app.get('/api/index', function(req, res) {
+      // db.product_category.findAll({}).then(function(allCat) {
+      // res.json(allCat);
+      // });
+      // });
     }
   });
 };

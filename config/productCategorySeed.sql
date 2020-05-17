@@ -1,6 +1,5 @@
-use  passport_demo;
-ALTER TABLE product_category MODIFY COLUMN createdAt TIMESTAMP NOT NULL DEFAULT current_timestamp;
-ALTER TABLE product_category MODIFY COLUMN updatedAt TIMESTAMP NOT NULL DEFAULT current_timestamp;
+use  shop_db;
+
 INSERT INTO product_category (category) VALUES ("Fresh vegetables");
 INSERT INTO product_category (category) VALUES ("Fresh fruits");
 INSERT INTO product_category (category) VALUES ("Refrigerated items");
@@ -8,7 +7,6 @@ INSERT INTO product_category (category) VALUES ("Frozen");
 INSERT INTO product_category (category) VALUES ("Condiments/Sauces");
 INSERT INTO product_category (category) VALUES ("Various groceries");
 INSERT INTO product_category (category) VALUES ("Canned foods");
-INSERT INTO product_category (category) VALUES ("Seafood");
 INSERT INTO product_category (category) VALUES ("Spices & Herbs");
 INSERT INTO product_category (category) VALUES ("Dairy");
 INSERT INTO product_category (category) VALUES ("Cheese");
